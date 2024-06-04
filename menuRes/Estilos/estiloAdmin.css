@@ -1,0 +1,451 @@
+﻿body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.elige {
+    color: white;
+    background-color: black;
+    padding: 12px;
+    margin-top: 9px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: none;
+}
+
+    .elige p {
+        text-align: center;
+        font-size: 16px;
+        margin: 0;
+    }
+
+.iconos {
+    width: 250px;
+    height: 250px;
+    display: block;
+    margin: 10px auto;
+}
+
+
+.divTitulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btn-cerrar {
+    background-image: url('../Imagenes/iconos/cerrarSesion.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    opacity: 70%;
+}
+
+    .btn-cerrar:hover {
+        opacity: 100%;
+    }
+
+.btn-agregar {
+    background-image: url('../Imagenes/iconos/agregar.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    opacity: 70%;
+}
+
+    .btn-agregar:hover {
+        opacity: 100%;
+    }
+
+.aceptarCancelar {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.btn-editar, .btn-eliminar, .btn-actualizar, .btn-cancelar {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: none;
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.btn-editar {
+    background-image: url('../Imagenes/iconos/editar.png');
+}
+
+.btn-eliminar {
+    background-image: url('../Imagenes/iconos/papelera.png');
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+    .btn-eliminar:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+.btn-actualizar {
+    background-image: url('../Imagenes/iconos/actualizar.png');
+    background-size: 17px;
+}
+
+.btn-cancelar {
+    background-image: url('../Imagenes/iconos/cerrar.png');
+    background-size: 15px;
+}
+
+.btn-eliminarDefinitivo {
+    background-color: orangered;
+    border-color: red;
+    color: white;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 6px rgba(255, 0, 0, 0.4);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+
+    .btn-eliminarDefinitivo:hover {
+        background-color: red;
+        color: white;
+        box-shadow: 0px 8px 12px rgba(255, 0, 0, 0.6);
+        transform: translateY(-2px);
+    }
+
+    .btn-eliminarDefinitivo:active {
+        box-shadow: 0px 2px 4px rgba(255, 0, 0, 0.4);
+        transform: translateY(1px);
+    }
+
+
+.titulo-panel {
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.btn-cancelarModal {
+    color: darkgray;
+}
+
+    .btn-cancelarModal:hover {
+        color: black;
+        opacity: 70%;
+    }
+
+.btn-vista {
+    background-color: gray;
+    color: white;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.4);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+    .btn-vista:hover {
+        background-color: white;
+        color: black;
+        box-shadow: 0px 8px 12px rgba(255, 255, 255, 0.6);
+        transform: translateY(-2px);
+    }
+
+    .btn-vista:active {
+        box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.4);
+        transform: translateY(1px);
+    }
+
+.table {
+    background-color: white;
+    color: black;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+    .table th {
+        background-color: #d3d3d3;
+        text-transform: uppercase;
+        border-bottom: 2px solid darkgray;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    .table td {
+        border-bottom: 1px solid lightgray;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    .table tr:last-child td {
+        border-bottom: none;
+    }
+
+.toast {
+    position: fixed;
+    font-size: 18px;
+    background-color: white;
+    color: black;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px;
+}
+
+
+
+.toast-custom-animation {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.toast-custom-animation-hide {
+    animation: fadeOut 0.5s ease-in-out;
+}
+
+
+#toastContainer {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1050;
+}
+
+.toast-header {
+    justify-content: center;
+    color: black;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.toast-title {
+    width: 250px;
+    color: black;
+    font-weight: bold;
+    margin: 0 auto;
+    text-align: center;
+    flex: 1;
+}
+
+.toast-body {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes entrada {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes entradaAbajo {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes entradaIzq {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes entradaDer {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#divAgregar, #divActualizar, #divPedidos, #divElige, #divActualizarVacio, #divAgregarVacio, #divPedidosVacio {
+    animation: entrada 0.7s ease forwards;
+}
+
+.modal-content {
+    background-color: white;
+    color: black;
+}
+
+.modal-header, .modal-body, .modal-footer {
+    color: black;
+}
+
+
+.modal-header {
+    border-bottom: 2px solid darkgray
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+button.close {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+    button.close:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+
+.modal-title {
+    color: black;
+}
+
+.text-danger {
+    color: lightgray;
+    display: none;
+}
+
+
+.hidden {
+    display: none;
+}
+
+#imagePreview {
+    max-width: 60px;
+    max-height: 60px;
+    margin-top: 10px;
+    position: relative;
+}
+
+
+#fileImagen {
+    background-color: gray;
+    color: white;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.4);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+    #fileImagen:hover {
+        background-color: white;
+        color: black;
+        box-shadow: 0px 8px 12px rgba(255, 255, 255, 0.6);
+        transform: translateY(-2px);
+    }
+
+    #fileImagen:active {
+        box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.4);
+        transform: translateY(1px);
+    }
+
+#fileUploadContainer {
+    animation: entradaDer 0.7s ease forwards;
+}
+
+#imagePreview img {
+    max-width: 100%;
+    max-height: 100%;
+    animation: entradaIzq 0.7s ease forwards;
+}
+
+.remove-image {
+    position: absolute;
+    background-image: url('../Imagenes/iconos/cerrarImg.png');
+    background-size: 17px;
+    border: none;
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 5px;
+    right: 5px;
+    top: -15px;
+    right: -15px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    cursor: pointer;
+    animation: fadeIn 0.7s ease forwards;
+}
+
+.file-upload-container {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+    .file-upload-container.dragover {
+        background-color: lightgray;
+        color: black;
+    }
+
+.alert-show {
+    animation: entradaAbajo 0.7s ease forwards;
+}
+
+.alert-hide {
+    animation: fadeOut 0.7s ease forwards;
+}

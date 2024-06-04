@@ -1,0 +1,325 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: black;
+    margin-bottom: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 20%;
+    margin: auto;
+    margin-top: 5%;
+    height: 469px;
+    width: 400px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    margin-top: -15%;
+}
+
+.bt1 {
+    background-color: lightgray;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 80%;
+    display: block;
+    margin: 20px auto; 
+    box-shadow: 0px 4px 6px lightgray;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+    .bt1:hover {
+        background-color: limegreen;
+        color: white;
+        box-shadow: 0px 8px 12px rgba(0, 255, 0, 0.6);
+        transform: translateY(-2px);
+    }
+
+    .bt1:active {
+        box-shadow: 0px 2px 4px rgba(0, 255, 0, 0.4);
+        transform: translateY(1px);
+    }
+
+.l1 {
+    margin-top: 14px;
+    float: left;
+}
+
+.secondary {
+    background-color: #e74c3c;
+    float: right;
+}
+
+.register-container {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 20%;
+    margin: auto;
+    margin-top: 5%;
+    height: 490px;
+    width: 400px;
+}
+
+h1 {
+    color: white;
+    margin-top: 10%;
+    margin-left: 14%;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1%;
+}
+
+a {
+    color: gray;
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: none;
+        color: #ECE3CE
+    }
+
+i {
+    color: black;
+}
+
+#cartItemCount {
+    background-color: black;
+    color: white;
+}
+
+.btn-cart {
+    transition: transform 0.3s ease-in-out;
+}
+
+    .btn-cart:hover {
+        transform: scale(1.2);
+    }
+
+.principal {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+#btn-princi {
+    background-color: #D3D3D3;
+}
+
+.nav-nombre {
+    font-size: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.total-container p {
+    font-size: 20px;
+}
+
+.total-container span {
+    font-size: 30px;
+    padding: 10px;
+}
+
+.navbar-left .fas.fa-bars:hover {
+    cursor: pointer;
+}
+
+.card-body {
+    background-color: black;
+}
+
+.card {
+    background-color: black;
+    border: 1px solid white;
+}
+
+.cart-table {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+    .cart-table th, .cart-table td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        width: 300px;
+    }
+
+    .cart-table th {
+        background-color: lightgray;
+        color: black;
+    }
+
+.total-container {
+    display: flex;
+    justify-content: space-between; 
+    padding-right: 5px; 
+}
+
+.btn-cancelarModal {
+    color: darkgray;
+}
+
+    .btn-cancelarModal:hover {
+        color: black;
+        opacity: 70%;
+    }
+
+.modal-content {
+    background-color: white;
+    color: black;
+}
+
+.modal-header, .modal-body, .modal-footer {
+    color: black;
+}
+
+.modal-header {
+    border-bottom: 2px solid darkgray
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+    .modal-footer .btn {
+        margin-left: 10px; 
+        min-width: 100px;
+    }
+
+.btn-cancelarModal, .btn-eliminarDefinitivo {
+    flex: 1;
+    text-align: center;
+}
+
+.btn-cancelarModal {
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+    color: #000;
+}
+
+.modal-title {
+    color: black;
+}
+
+button.close {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+    button.close:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+.btn-cancelarModal {
+    color: darkgray;
+}
+
+    .btn-cancelarModal:hover {
+        color: black;
+        opacity: 70%;
+    }
+
+.btn-eliminarDefinitivo {
+    background-color: orangered;
+    border-color: red;
+    color: white;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 6px rgba(255, 0, 0, 0.4);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+    .btn-eliminarDefinitivo:hover {
+        background-color: red;
+        color: white;
+        box-shadow: 0px 8px 12px rgba(255, 0, 0, 0.6);
+        transform: translateY(-2px);
+    }
+
+    .btn-eliminarDefinitivo:active {
+        box-shadow: 0px 2px 4px rgba(255, 0, 0, 0.4);
+        transform: translateY(1px);
+    }
+
+.btn-agregar {
+    background-image: url('../Imagenes/iconos/agregar.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    opacity: 70%;
+}
+
+    .btn-agregar:hover {
+        opacity: 100%;
+    }
+
+.btn-atras {
+    background-image: url('../Imagenes/iconos/flechaAtrasBlanca.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    opacity: 70%;
+}
+
+    .btn-atras:hover {
+        opacity: 100%;
+    }

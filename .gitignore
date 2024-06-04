@@ -1,0 +1,3 @@
+# Ignorar archivos temporales de Visual Studio, resultados de compilación y
+# carpetas generadas por complementos populares de Visual Studio.
+.vs/

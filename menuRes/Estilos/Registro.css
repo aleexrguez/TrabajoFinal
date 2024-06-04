@@ -1,0 +1,60 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.login-container {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 20%;
+    margin: auto;
+    margin-top: 5%;
+    height: 469px;
+    width: 400px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.bt1 {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.l1 {
+    margin-top: 14px;
+    float: left;
+}
+
+.secondary {
+    background-color: #e74c3c;
+    float: right;
+}
+
+
+.register-container {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 20%;
+    margin: auto;
+    margin-top: 5%;
+    height: 490px;
+    width: 400px;
+}
