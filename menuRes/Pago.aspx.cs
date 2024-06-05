@@ -145,7 +145,7 @@ namespace menuRes
             string expiryDate = expira.Text.Trim();
             string cvc = cvv.Text.Trim();
 
-            if (cardNumber.Length != 16)
+            if (cardNumber.Length != 16 || !cardNumber.All(char.IsDigit))
             {
                 Error.Text = "El número de tarjeta debe tener 16 dígitos.";
                 Error.Visible = true;
@@ -172,6 +172,11 @@ namespace menuRes
                 Error.Text = "El formato de la fecha de expiración es inválido.";
                 Error.Visible = true;
                 return;
+            }
+
+            if (expiryDateTime.Year < 2000)
+            {
+                expiryDateTime = expiryDateTime.AddYears(100);
             }
 
             if (expiryDateTime < DateTime.Now)

@@ -86,7 +86,7 @@
                                                 <span class="font-weight-normal card-text">Número de tarjeta</span>
                                                 <div class="input">
                                                     <i class="fa fa-credit-card"></i>
-                                                    <asp:TextBox ID="numTar" runat="server" placeholder="0000 0000 0000 0000" MaxLength="16"></asp:TextBox>
+                                                    <asp:TextBox ID="numTar" runat="server" placeholder="0000 0000 0000 0000" MaxLength="16" oninput="validateNumber(this, 16)" />
                                                 </div>
                                                 <div class="row mt-3 mb-3">
                                                     <div class="col-md-6">
@@ -100,7 +100,7 @@
                                                         <span class="font-weight-normal card-text">CVC/CVV</span>
                                                         <div class="input">
                                                             <i class="fa fa-lock"></i>
-                                                            <asp:TextBox ID="cvv" runat="server" placeholder="000" MaxLength="3"></asp:TextBox>
+                                                           <asp:TextBox ID="cvv" runat="server" placeholder="000" MaxLength="3" oninput="validateNumber(this, 3)" />
                                                         </div>
                                                     </div>
                                                     <asp:Label ID="Error" runat="server" Text="" Visible="false" ForeColor="Red"></asp:Label>
@@ -155,6 +155,12 @@
             const expirationInput = document.getElementById('expira');
             expirationInput.addEventListener('input', formatExpirationDate);
         });
+        function validateNumber(input, maxLength) {
+            input.value = input.value.replace(/\D/g, ''); // Eliminar todos los caracteres no numéricos
+            if (input.value.length > maxLength) {
+                input.value = input.value.slice(0, maxLength); // Limitar la longitud del valor
+            }
+        }
     </script>
 </body>
 </html>
