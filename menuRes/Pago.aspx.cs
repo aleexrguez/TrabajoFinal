@@ -191,44 +191,44 @@ namespace menuRes
                 doc.LoadHtml(html);
                 HtmlNode totalNode = doc.DocumentNode.SelectSingleNode("//span[@class='total']");
                 decimal totalCompra = 0;
-                if (totalNode != null && decimal.TryParse(totalNode.InnerText.Replace("€", "").Trim(), out totalCompra))
+            if (totalNode != null && decimal.TryParse(totalNode.InnerText.Replace("€", "").Trim(), out totalCompra))
+            {
+                using (MySqlConnection connection = new MySqlConnection("Database=menucomida;Data Source=localhost;User=root;Port=3306"))
                 {
-                    string connectionString = "Database=menucomida;Data Source=localhost;User=root;Port=3306";
-                    using (MySqlConnection connection = new MySqlConnection(connectionString))
+                    connection.Open();
+                    string insertPedidoQuery = "INSERT INTO Pedido (fecha, total) VALUES (@fecha, @total); SELECT LAST_INSERT_ID();";
+                    using (MySqlCommand command = new MySqlCommand(insertPedidoQuery, connection))
                     {
-                        connection.Open();
-                        string insertPedidoQuery = "INSERT INTO Pedido (fecha, total) VALUES (@fecha, @total); SELECT LAST_INSERT_ID();";
-                        using (MySqlCommand command = new MySqlCommand(insertPedidoQuery, connection))
-                        {
-                            command.Parameters.AddWithValue("@fecha", DateTime.Now);
-                            command.Parameters.AddWithValue("@total", totalCompra);
-                            int pedidoId = Convert.ToInt32(command.ExecuteScalar());
+                        command.Parameters.AddWithValue("@fecha", DateTime.Now);
+                        command.Parameters.AddWithValue("@total", totalCompra);
+                        int pedidoId = Convert.ToInt32(command.ExecuteScalar());
 
-                            int itemCount = (Request.QueryString.Count - 1) / 3;
-                            for (int i = 0; i < itemCount; i++)
+                        int itemCount = (Request.QueryString.Count - 1) / 3;
+                        for (int i = 0; i < itemCount; i++)
+                        {
+                            string nombre = Request.QueryString.Get("nombre" + i);
+                            int cantidad = Convert.ToInt32(Request.QueryString.Get("cantidad" + i));
+                            int productoId = ObtenerIdProducto(nombre);
+                            if (productoId != -1)
                             {
-                                string nombre = Request.QueryString.Get("nombre" + i);
-                                int cantidad = Convert.ToInt32(Request.QueryString.Get("cantidad" + i));
-                                int productoId = ObtenerIdProducto(nombre);
-                                if (productoId != -1)
+                                string insertProductoQuery = "INSERT INTO pedidos_productos (id_pedido, id_producto, cantidad) VALUES (@id_pedido, @id_producto, @cantidad);";
+                                using (MySqlCommand productoCommand = new MySqlCommand(insertProductoQuery, connection))
                                 {
-                                    string insertProductoQuery = "INSERT INTO pedidos_productos (id_pedido, id_producto, cantidad) VALUES (@id_pedido, @id_producto, @cantidad);";
-                                    using (MySqlCommand productoCommand = new MySqlCommand(insertProductoQuery, connection))
-                                    {
-                                        productoCommand.Parameters.AddWithValue("@id_pedido", pedidoId);
-                                        productoCommand.Parameters.AddWithValue("@id_producto", productoId);
-                                        productoCommand.Parameters.AddWithValue("@cantidad", cantidad);
-                                        productoCommand.ExecuteNonQuery();
-                                    }
+                                    productoCommand.Parameters.AddWithValue("@id_pedido", pedidoId);
+                                    productoCommand.Parameters.AddWithValue("@id_producto", productoId);
+                                    productoCommand.Parameters.AddWithValue("@cantidad", cantidad);
+                                    productoCommand.ExecuteNonQuery();
                                 }
+                            }
                             ClientScript.RegisterStartupScript(this.GetType(), "redirect", $"window.location.href = 'Agradecimiento.aspx?id_pedido={pedidoId}';", true);
                         }
-                        }
                     }
-                
+                }
+
             }
 
-        }      
+
+        }
 
     }
 }

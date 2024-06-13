@@ -27,10 +27,10 @@ a {
     color: gray;
 }
 
-a:hover {
-    text-decoration: none;
-    color: #ECE3CE
-}
+    a:hover {
+        text-decoration: none;
+        color: #ECE3CE
+    }
 
 i {
     color: black;
@@ -45,9 +45,9 @@ i {
     transition: transform 0.3s ease-in-out;
 }
 
-.btn-cart:hover {
-    transform: scale(1.2);
-}
+    .btn-cart:hover {
+        transform: scale(1.2);
+    }
 
 .modal-dialog {
     display: flex;
@@ -81,11 +81,11 @@ i {
     justify-content: space-between;
 }
 
-.modal-footer .btn-secondary {
-    color: black;
-    background-color: white;
-    border-color: black;
-}
+    .modal-footer .btn-secondary {
+        color: black;
+        background-color: white;
+        border-color: black;
+    }
 
 .container {
     margin-bottom: 10%;
@@ -113,21 +113,21 @@ i {
 }
 
 .card-body {
-    text-align: center; 
+    text-align: center;
 }
 
 .card-title {
-    font-size: 1.2rem; 
-    margin-bottom: 10px; 
+    font-size: 1.2rem;
+    margin-bottom: 10px;
 }
 
 .card-text {
-    font-size: 1rem; 
-    margin-bottom: 10px; 
+    font-size: 1rem;
+    margin-bottom: 10px;
 }
 
 .product-container {
-    margin-bottom: 30px; 
+    margin-bottom: 30px;
 }
 
 .card .btn-carrito {
@@ -138,25 +138,26 @@ i {
     box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.4);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
-.card .btn-carrito:hover {
-    background-color: white;
-    color: black;
-    box-shadow: 0px 8px 12px rgba(255, 255, 255, 0.6);
-    transform: translateY(-2px);
-}
 
-.card .btn-carrito.hover-effect {
-    background-color: white;
-    color: black;
-    box-shadow: 0px 8px 12px rgba(255, 255, 255, 0.6);
-    transform: translateY(-2px);
-}
+    .card .btn-carrito:hover {
+        background-color: white;
+        color: black;
+        box-shadow: 0px 8px 12px rgba(255, 255, 255, 0.6);
+        transform: translateY(-2px);
+    }
+
+    .card .btn-carrito.hover-effect {
+        background-color: white;
+        color: black;
+        box-shadow: 0px 8px 12px rgba(255, 255, 255, 0.6);
+        transform: translateY(-2px);
+    }
 
 
-.card .btn-carrito:active {
-    box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.4);
-    transform: translateY(1px);
-}
+    .card .btn-carrito:active {
+        box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.4);
+        transform: translateY(1px);
+    }
 
 
 
@@ -166,11 +167,11 @@ i {
     border-color: #ECE3CE;
 }
 
-.btn-secondary:hover {
-    color: white;
-    background-color: #739072;
-    border-color: #ECE3CE;
-}
+    .btn-secondary:hover {
+        color: white;
+        background-color: #739072;
+        border-color: #ECE3CE;
+    }
 
 #imageCarousel {
     width: 100%;
@@ -232,10 +233,10 @@ i {
     border-radius: 10px;
 }
 
-.table th,
-.table td {
-    border-color: black;
-}
+    .table th,
+    .table td {
+        border-color: black;
+    }
 
 #checkoutBtn {
     background-color: gray;
@@ -246,17 +247,17 @@ i {
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-#checkoutBtn:hover {
-    background-color: black;
-    color: white;
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.6);
-    transform: translateY(-2px);
-}
+    #checkoutBtn:hover {
+        background-color: black;
+        color: white;
+        box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.6);
+        transform: translateY(-2px);
+    }
 
-#checkoutBtn:active {
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
-    transform: translateY(1px);
-}
+    #checkoutBtn:active {
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+        transform: translateY(1px);
+    }
 
 .navbar a {
     text-decoration: none;
@@ -284,10 +285,10 @@ i {
     z-index: 1001;
 }
 
-.menu.open {
-    left: 0;
-    box-shadow: 10px 0 15px rgba(255, 255, 255, 0.2);
-}
+    .menu.open {
+        left: 0;
+        box-shadow: 10px 0 15px rgba(255, 255, 255, 0.2);
+    }
 
 .menu-item {
     padding: 10px 20px;
@@ -336,17 +337,17 @@ i {
     height: 85%;
 }
 
-.card img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.5s ease;
-    object-fit: cover;
-    padding: 6%;
-}
+    .card img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.5s ease;
+        object-fit: cover;
+        padding: 6%;
+    }
 
-.card:hover img {
-    transform: scale(1.1) rotateY(10deg); 
-}
+    .card:hover img {
+        transform: scale(1.1) rotateY(10deg);
+    }
 
 .card-body-overlay {
     position: absolute;
@@ -364,102 +365,101 @@ i {
 }
 
 footer {
-    position: relative; 
     width: 100%;
     background: gray;
-    min-height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-footer .social_icon,
-footer .menu-footer {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0;
-    flex-wrap: wrap;
-}    
-
-footer .social_icon li,
-footer .menu-footer li {
-    list-style: none;
 }
 
-footer .social_icon li a {
-    font-size: 2em;
-    color: #fff;
-    margin: 0 10px;
-    display: inline-block;
-    transition: 0.5s;
-}
+    footer .social_icon,
+    footer .menu-footer {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        flex-wrap: wrap;
+    }
 
-footer .social_icon li a:hover {
-    transform: translateY(-10px); 
-}
+        footer .social_icon li,
+        footer .menu-footer li {
+            list-style: none;
+        }
 
-footer .menu-footer li a {
-   font-size: 1.2em;
-   color: #fff;
-   margin: 0 10px;
-   display: inline-block;
-   transition: 0.5s;
-   text-decoration: none;
-   opacity: 0.75;
-}
+            footer .social_icon li a {
+                font-size: 2em;
+                color: #fff;
+                margin: 0 10px;
+                display: inline-block;
+                transition: 0.5s;
+            }
 
-footer .menu-footer li a:hover {
-   opacity: 1;
-}
+                footer .social_icon li a:hover {
+                    transform: translateY(-10px);
+                }
 
-footer p {
-    color: #fff;
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    font-size: 1.1em;
-}
+            footer .menu-footer li a {
+                font-size: 1.2em;
+                color: #fff;
+                margin: 0 10px;
+                display: inline-block;
+                transition: 0.5s;
+                text-decoration: none;
+                opacity: 0.75;
+            }
 
-footer .wave {
-    position: absolute;
-    top: -100px;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: url(../Imagenes/waveDark.png);
-    background-size: 1000px 100px;
-}
+                footer .menu-footer li a:hover {
+                    opacity: 1;
+                }
 
-footer .wave#wave1 {
-    z-index: 1000;
-    opacity: 1;
-    bottom: 0;
-    animation: animateWave 4s linear infinite;
-}
+    footer p {
+        color: #fff;
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        font-size: 1.1em;
+    }
 
-footer .wave#wave2 {
-    z-index: 999;
-    opacity: 0.5;
-    bottom: 10px;
-    animation: animateWave_02 4s linear infinite;
-}
+    footer .wave {
+        position: absolute;
+        top: -100px;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: url(../Imagenes/waveDark.png);
+        background-size: 1000px 100px;
+    }
 
-footer .wave#wave3 {
-     z-index: 1000;
-     opacity: 0.2;
-     bottom: 15px;
-     animation: animateWave 3s linear infinite;
-}
+        footer .wave#wave1 {
+            z-index: 1000;
+            opacity: 1;
+            bottom: 0;
+            animation: animateWave 4s linear infinite;
+        }
 
-footer .wave#wave4 {
-     z-index: 999;
-     opacity: 0.7;
-     bottom: 20px;
-     animation: animateWave_02 3s linear infinite;
-}
+        footer .wave#wave2 {
+            z-index: 999;
+            opacity: 0.5;
+            bottom: 10px;
+            animation: animateWave_02 4s linear infinite;
+        }
+
+        footer .wave#wave3 {
+            z-index: 1000;
+            opacity: 0.2;
+            bottom: 15px;
+            animation: animateWave 3s linear infinite;
+        }
+
+        footer .wave#wave4 {
+            z-index: 999;
+            opacity: 0.7;
+            bottom: 20px;
+            animation: animateWave_02 3s linear infinite;
+        }
 
 @keyframes animateWave {
     0% {
@@ -496,30 +496,30 @@ footer .wave#wave4 {
     color: white;
 }
 
-.navbar.transparent {
-    background-color: rgba(0, 0, 0, 0);
-    padding: 20px 40px;
-}
+    .navbar.transparent {
+        background-color: rgba(0, 0, 0, 0);
+        padding: 20px 40px;
+    }
 
-.navbar.solid {
-     background-color: rgba(0, 0, 0, 0.8);
-     padding: 10px 20px;
-     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-     color: white;
-}
+    .navbar.solid {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 10px 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        color: white;
+    }
 
-.navbar a, .navbar button {
-     color: white;
-     text-decoration: none;
-}
+    .navbar a, .navbar button {
+        color: white;
+        text-decoration: none;
+    }
 
 .nav li {
-    margin-right: 15px; 
+    margin-right: 15px;
 }
 
-.nav li:last-child {
-    margin-right: 0; 
-}
+    .nav li:last-child {
+        margin-right: 0;
+    }
 
 .btn-pagar {
     background-color: gray;
@@ -529,17 +529,17 @@ footer .wave#wave4 {
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.btn-pagar:hover {
-    background-color: white;
-    color: black;
-    box-shadow: 0px 8px 12px rgba(255, 255, 255, 0.6);
-    transform: translateY(-2px);
-}
+    .btn-pagar:hover {
+        background-color: white;
+        color: black;
+        box-shadow: 0px 8px 12px rgba(255, 255, 255, 0.6);
+        transform: translateY(-2px);
+    }
 
-.btn-pagar:active {
-    box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.4);
-    transform: translateY(1px);
- }
+    .btn-pagar:active {
+        box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.4);
+        transform: translateY(1px);
+    }
 
 .toast {
     position: fixed;
@@ -552,7 +552,7 @@ footer .wave#wave4 {
     border-radius: 5px;
     text-align: center;
     padding: 15px;
-    z-index: 9999; 
+    z-index: 9999;
 }
 
 .toast-header {
@@ -582,10 +582,10 @@ button.close {
     box-shadow: none;
 }
 
-button.close:focus {
-    outline: none;
-    box-shadow: none;
-}
+    button.close:focus {
+        outline: none;
+        box-shadow: none;
+    }
 
 @media (max-width: 768px) {
     .nav-nombre {
@@ -620,12 +620,6 @@ button.close:focus {
     }
 }
 
-@media (min-width: 767px) {
-    footer {
-        position: absolute; 
-        bottom: 0;
-    }
-}
 
 .btn-sumar, .btn-eliminar, .btn-quitar {
     width: 20px;
@@ -648,10 +642,10 @@ button.close:focus {
     box-shadow: none;
 }
 
-.btn-eliminar:focus, .btn-sumar:focus, .btn-quitar:focus {
-    outline: none;
-    box-shadow: none;
-}
+    .btn-eliminar:focus, .btn-sumar:focus, .btn-quitar:focus {
+        outline: none;
+        box-shadow: none;
+    }
 
 .btn-quitar {
     background-image: url('../Imagenes/iconos/restar.png');

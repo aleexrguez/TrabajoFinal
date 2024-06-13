@@ -1,0 +1,659 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 20px;
+    background-color: black;
+    color: #4F6F52;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: white;
+    margin-top: 10%;
+    margin-left: 14%;
+}
+
+a {
+    color: gray;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ECE3CE
+}
+
+i {
+    color: black;
+}
+
+#cartItemCount {
+    background-color: black;
+    color: white;
+}
+
+.btn-cart {
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-cart:hover {
+    transform: scale(1.2);
+}
+
+.modal-dialog {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 60px);
+    max-width: 600px;
+}
+
+.modal-content {
+    margin: auto;
+}
+
+.form-label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    font-size: 1rem;
+    height: calc(1.5em + 0.75rem + 2px);
+}
+
+.modal-body {
+    padding: 20px;
+    background-color: black;
+}
+
+.modal-footer {
+    background-color: white;
+    border-top: 1px solid #3A4D39;
+    justify-content: space-between;
+}
+
+.modal-footer .btn-secondary {
+    color: black;
+    background-color: white;
+    border-color: black;
+}
+
+.container {
+    margin-bottom: 10%;
+}
+
+#tarjetasComida {
+    animation: entrada 0.5s ease forwards;
+}
+
+@keyframes entrada {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 8px 12px rgba(255, 255, 255, 0.8);
+}
+
+.card-body {
+    text-align: center; 
+}
+
+.card-title {
+    font-size: 1.2rem; 
+    margin-bottom: 10px; 
+}
+
+.card-text {
+    font-size: 1rem; 
+    margin-bottom: 10px; 
+}
+
+.product-container {
+    margin-bottom: 30px; 
+}
+
+.card .btn-carrito {
+    background-color: gray;
+    color: white;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.4);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.card .btn-carrito:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0px 8px 12px rgba(255, 255, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+.card .btn-carrito.hover-effect {
+    background-color: white;
+    color: black;
+    box-shadow: 0px 8px 12px rgba(255, 255, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+
+.card .btn-carrito:active {
+    box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.4);
+    transform: translateY(1px);
+}
+
+
+
+.btn-secondary {
+    color: black;
+    background-color: #739072;
+    border-color: #ECE3CE;
+}
+
+.btn-secondary:hover {
+    color: white;
+    background-color: #739072;
+    border-color: #ECE3CE;
+}
+
+#imageCarousel {
+    width: 100%;
+    margin-bottom: -10%;
+    opacity: 0.6;
+}
+
+.carousel-inner {
+    height: 400px;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#cartModal .modal-content {
+    border-radius: 10px;
+}
+
+#cartItemsList .list-group-item {
+    border: none;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#cartItemsList .btn-add,
+#cartItemsList .btn-subtract,
+#cartItemsList .btn-delete {
+    margin-left: 10px;
+}
+
+#cartItemsList .item-details {
+    flex-grow: 1;
+}
+
+#emptyCartMessage {
+    display: none;
+    margin-top: 20px;
+    color: #868e96;
+}
+
+.modal-header2 {
+    padding: 30px 10px;
+    font-size: 30px;
+    margin-top: -40px;
+    border-bottom: none;
+    color: black;
+}
+
+.table {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+}
+
+.table th,
+.table td {
+    border-color: black;
+}
+
+#checkoutBtn {
+    background-color: gray;
+    color: white;
+    position: relative;
+    left: 85%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#checkoutBtn:hover {
+    background-color: black;
+    color: white;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.6);
+    transform: translateY(-2px);
+}
+
+#checkoutBtn:active {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    transform: translateY(1px);
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.nav-nombre {
+    font-size: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: lightgray;
+    color: white;
+    transition: left 0.3s ease;
+    padding-top: 50px;
+    z-index: 1001;
+}
+
+.menu.open {
+    left: 0;
+    box-shadow: 10px 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.menu-item {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.active {
+    color: black;
+}
+
+.menu-item.inactive {
+    background-color: gray;
+    color: white;
+}
+
+.menu-item:hover {
+    background-color: #555;
+    color: lightgray;
+}
+
+.navbar-left .fas.fa-bars:hover {
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    perspective: 1000px;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    border: 10px solid white;
+    background-color: black;
+    border-radius: 10px;
+    margin: 8%;
+    height: 85%;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+    object-fit: cover;
+    padding: 6%;
+}
+
+.card:hover img {
+    transform: scale(1.1) rotateY(10deg); 
+}
+
+.card-body-overlay {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    color: #fff;
+    transition: bottom 0.5s ease;
+}
+
+.card:hover .card-body-overlay {
+    bottom: 0;
+}
+
+footer {
+    position: relative; 
+    width: 100%;
+    background: gray;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .social_icon,
+footer .menu-footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}    
+
+footer .social_icon li,
+footer .menu-footer li {
+    list-style: none;
+}
+
+footer .social_icon li a {
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+footer .social_icon li a:hover {
+    transform: translateY(-10px); 
+}
+
+footer .menu-footer li a {
+   font-size: 1.2em;
+   color: #fff;
+   margin: 0 10px;
+   display: inline-block;
+   transition: 0.5s;
+   text-decoration: none;
+   opacity: 0.75;
+}
+
+footer .menu-footer li a:hover {
+   opacity: 1;
+}
+
+footer p {
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(../Imagenes/waveDark.png);
+    background-size: 1000px 100px;
+}
+
+footer .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave_02 4s linear infinite;
+}
+
+footer .wave#wave3 {
+     z-index: 1000;
+     opacity: 0.2;
+     bottom: 15px;
+     animation: animateWave 3s linear infinite;
+}
+
+footer .wave#wave4 {
+     z-index: 999;
+     opacity: 0.7;
+     bottom: 20px;
+     animation: animateWave_02 3s linear infinite;
+}
+
+@keyframes animateWave {
+    0% {
+        background-position-x: 1000px;
+    }
+
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animateWave_02 {
+    0% {
+        background-position-x: 0px;
+    }
+
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    transition: background-color 0.3s, padding 0.3s;
+    z-index: 1000;
+    background-color: transparent;
+    color: white;
+}
+
+.navbar.transparent {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 20px 40px;
+}
+
+.navbar.solid {
+     background-color: rgba(0, 0, 0, 0.8);
+     padding: 10px 20px;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+     color: white;
+}
+
+.navbar a, .navbar button {
+     color: white;
+     text-decoration: none;
+}
+
+.nav li {
+    margin-right: 15px; 
+}
+
+.nav li:last-child {
+    margin-right: 0; 
+}
+
+.btn-pagar {
+    background-color: gray;
+    color: white;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.4);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.btn-pagar:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0px 8px 12px rgba(255, 255, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+.btn-pagar:active {
+    box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.4);
+    transform: translateY(1px);
+ }
+
+.toast {
+    position: fixed;
+    font-size: 18px;
+    background-color: white;
+    color: black;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px;
+    z-index: 9999; 
+}
+
+.toast-header {
+    justify-content: center;
+    color: black;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.toast-title {
+    width: 250px;
+    color: black;
+    font-weight: bold;
+    margin: 0 auto;
+    text-align: center;
+    flex: 1;
+}
+
+.toast-body {
+    display: none;
+}
+
+button.close {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+button.close:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+@media (max-width: 768px) {
+    .nav-nombre {
+        position: absolute;
+        right: 90%;
+    }
+
+    .navbar-right {
+        position: fixed;
+        bottom: 2%;
+        right: 2%;
+        margin: 10px;
+    }
+
+    .btn-pagar {
+        padding: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 490px) {
+    .nav-nombre {
+        font-size: 40px;
+        position: absolute;
+        left: 30%;
+        transform: translateX(-50%);
+    }
+
+    .navbar-left a {
+        display: none;
+    }
+}
+
+@media (min-width: 767px) {
+    footer {
+        position: absolute; 
+        bottom: 0;
+    }
+}
+
+.btn-sumar, .btn-eliminar, .btn-quitar {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: none;
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.btn-sumar {
+    background-image: url('../Imagenes/iconos/mas.png');
+}
+
+.btn-eliminar {
+    background-image: url('../Imagenes/iconos/papelera.png');
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.btn-eliminar:focus, .btn-sumar:focus, .btn-quitar:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-quitar {
+    background-image: url('../Imagenes/iconos/restar.png');
+    background-size: 17px;
+}
